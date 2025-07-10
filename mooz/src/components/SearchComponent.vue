@@ -14,10 +14,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { ClearSVG, SeacrhSVG } from "./SVG";
+import { useCardsStore } from "@/stores/cards";
 
 const resultInput = ref("");
+const { setSeacrhWord, clearCards } = useCardsStore();
+const TIME_DEBOUNCE = 500;
+let timerId: number | undefined;
 
-const clearSearch = () => (resultInput.value = "");
+const clearSearch = () => {
+  clearCards();
+  resultInput.value = "";
+};
+
+watch(resultInput, () => {
+  clearTimeout(timerId);
+  timerId = setTimeout(() => {
+    if (resultInput?.value) {
+      setSeacrhWord(resultInput?.value);
+    } else {
+      clearSearch();
+    }
+  }, TIME_DEBOUNCE);
+});
 </script>

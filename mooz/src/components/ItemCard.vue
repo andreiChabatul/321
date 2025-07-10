@@ -11,3 +11,12 @@
     <p>Name: Batman</p>
   </div>
 </template>
+
+<script setup lang="ts">
+import { Movie } from "@/stores/types";
+import { defineProps } from "vue";
+
+defineProps<{
+  item: Movie;
+}>();
+</script>
