@@ -11,7 +11,7 @@
   font-size: calc(100vw / 1920 * 10);
 
   @include r($xl) {
-    font-size: calc(100vw / 2100 * 10);
+    font-size: calc(100vw / 1400 * 10);
   }
 
   @include r($lg) {
@@ -74,6 +74,6 @@ body {
   color: rgba(0, 27, 33, 1);
   overflow: hidden;
   line-height: 1;
-  font-family: Styrene A LC;
+  font-family: Gilroy;
   text-align: center;
 }
