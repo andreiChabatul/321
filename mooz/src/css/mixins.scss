@@ -1,0 +1,54 @@
+@mixin r($width) {
+  @media only screen and (max-width: $width + 'px') {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: ($width + 1) + 'px') {
+    @content;
+  }
+}
+
+// height
+@mixin rh($height) {
+  @media only screen and (max-height: $height + 'px') {
+    @content;
+  }
+}
+
+@mixin rhmin($height) {
+  @media only screen and (min-height: $height + 'px') {
+    @content;
+  }
+}
+
+@mixin r390-h720 {
+  @media only screen and (max-width: 392px) and (max-height: 720px) {
+    @content;
+  }
+}
+
+@mixin r375-h600 {
+  @media only screen and (max-width: 375px) and (max-height: 620px) {
+    @content;
+  }
+}
+
+@mixin bigTablet {
+  @media only screen and (min-device-width: 800px) and (min-device-height: 1000px) and (max-device-width: 1025px) {
+    @content;
+  }
+}
+
+// font-family
+@mixin font($alias, $name, $weight, $style: normal) {
+  @font-face {
+    font-display: swap;
+    font-family: $alias;
+    font-style: $style;
+    font-weight: $weight;
+    src: url('../css/fonts/'+ $name + '.ttf') format('woff2'),
+      url('../css/fonts/' + $name + '.ttf') format('woff');
+  }
+}

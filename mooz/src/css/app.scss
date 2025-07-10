@@ -1,0 +1,80 @@
+// app global css in Sass form
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '../css/_reset.scss';
+@import '../css/mixins.scss';
+@import '../css/variables.scss';
+@import '../css/fonts.scss';
+
+:root {
+  font-size: calc(100vw / 1920 * 10);
+
+  @include r($xl) {
+    font-size: calc(100vw / 2100 * 10);
+  }
+
+  @include r($lg) {
+    font-size: calc(100vw / 1300 * 10);
+  }
+
+  @include r($md) {
+    font-size: calc(100vw / 820 * 10);
+  }
+
+  @include r($sm) {
+    font-size: calc(100vw / 768 * 10);
+  }
+
+  @include bigTablet {
+    font-size: calc(100vw / 850 * 10);
+  }
+
+  @include r($xs) {
+    font-size: calc(100vw / 420 * 10);
+  }
+
+  @include r($xs405) {
+    font-size: calc(100vw / 402 * 10);
+  }
+
+  @include r($xs400) {
+    font-size: calc(100vw / 393 * 10);
+  }
+
+  @include r($xss) {
+    font-size: calc(100vw / 440 * 10);
+  }
+
+  @include r($xs390) {
+    font-size: calc(100vw / 420 * 10);
+  }
+
+  @include r390-h720 {
+    font-size: calc(100vw / 420 * 10);
+  }
+
+  @include r375-h600 {
+    font-size: calc(100vw / 500 * 10);
+  }
+}
+
+html {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  touch-action: pan-x pan-y;
+  overflow: hidden;
+}
+
+body {
+  font-weight: 400;
+  color: rgba(0, 27, 33, 1);
+  overflow: hidden;
+  line-height: 1;
+  font-family: Styrene A LC;
+  text-align: center;
+}
