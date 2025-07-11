@@ -3,12 +3,13 @@
     <HeaderComponent class="mb-[4.5rem]" />
     <ResultSearch class="mb-[3.5rem]" />
     <CardsContainer />
-    <div>пагианция</div>
+    <PaginationComponent />
   </div>
 </template>
 
 <script setup lang="ts">
 import CardsContainer from "@/components/CardsContainer.vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
+import PaginationComponent from "@/components/PaginationComponent.vue";
 import ResultSearch from "@/components/ResultSearch.vue";
 </script>
