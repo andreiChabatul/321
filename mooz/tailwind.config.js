@@ -21,9 +21,8 @@ module.exports = {
 
       },
       screens: {
-        maxDV: { max: '1500px' },
-        miniDV: { max: '1199px' },
-        mobileM: { max: '530px' },
+        laptop: { max: '1400px' },
+        mobile: { max: '500px' },
       }
     }
   },

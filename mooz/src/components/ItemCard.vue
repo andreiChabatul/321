@@ -1,11 +1,11 @@
 <template>
   <div class="w-[24.5rem] h-[38rem] text-[1.6rem] text-left">
     <div
-      class="w-full h-[27rem] overflow-hidden border-solid border-[1px] rounded-[1rem] mb-[2.3rem] flex items-center justify-center"
-      :class="{ 'border-Color_blue': errorImg }"
+      class="w-full h-[27rem] overflow-hidden rounded-[1rem] mb-[2.3rem] flex items-center justify-center"
+      :class="{ 'border-Color_blue border-solid border-[1px]': errorImg }"
     >
       <img
-        class="w-full"
+        class="w-full h-full object-cover"
         v-if="!errorImg"
         :src="item?.Poster"
         alt="poster"

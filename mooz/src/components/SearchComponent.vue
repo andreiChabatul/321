@@ -1,12 +1,12 @@
 <template>
   <div class="relative">
     <input
-      class="w-[28rem] h-[4rem] border-Color_gray border-solid border-[0.1rem] rounded-[0.5rem] focus:border-Color_blue duration-300 text-Dark_gray px-[1.5rem] py-[1rem] text-[1.4rem]"
+      class="w-[28rem] h-[4rem] border-Color_gray border-solid border-[0.1rem] rounded-[0.5rem] focus:border-Color_blue duration-300 text-Dark_gray px-[1.5rem] py-[1rem] text-[1.4rem] mobile:w-[18rem] mobile:h-[3.5rem]"
       type="text"
       v-model="resultInput"
       placeholder="Введите запрос..."
     />
-    <div class="absolute top-[1.3rem] right-[1.5rem]">
+    <div class="absolute top-[1.3rem] right-[1.5rem] mobile:top-[1rem]">
       <SeacrhSVG v-if="!resultInput" />
       <ClearSVG class="cursor-pointer" @click="clearSearch" v-else />
     </div>

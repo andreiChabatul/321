@@ -1,5 +1,7 @@
 <template>
-  <div class="py-[5rem] px-[8vw] grid grid-rows-[auto_auto_1fr_auto] h-screen">
+  <div
+    class="py-[5rem] px-[8vw] grid grid-rows-[auto_auto_1fr_auto] h-screen laptop:px-[3vw] laptop:py-[3rem]"
+  >
     <HeaderComponent class="mb-[4.5rem]" />
     <ResultSearch class="mb-[3.5rem]" />
     <CardsContainer />

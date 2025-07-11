@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="w-[13.4rem]"
+    class="w-[13.4rem] mobile:w-[10rem]"
     viewBox="0 0 134 36"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
